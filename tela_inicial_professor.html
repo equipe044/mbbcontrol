@@ -29,7 +29,7 @@
             display: block;
             margin-bottom: 10px;
         }
-        input[type="text"], input[type="email"], input[type="password"] {
+        input[type="text"], input[type="email"], input[type="password"], select {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -50,12 +50,6 @@
         button:hover {
             background-color: #58098c;
         }
-        .success-message {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 18px;
-            color: #6A0DAD;
-        }
     </style>
 </head>
 <body>
@@ -74,13 +68,21 @@
             
             <label for="subject">Disciplina:</label>
             <input type="text" id="subject" name="subject" placeholder="Digite a disciplina que você leciona" required>
+
+            <label for="day">Dia da Semana:</label>
+            <select id="day" name="day" required>
+                <option value="Segunda-feira">Segunda-feira</option>
+                <option value="Terça-feira">Terça-feira</option>
+                <option value="Quarta-feira">Quarta-feira</option>
+                <option value="Quinta-feira">Quinta-feira</option>
+                <option value="Sexta-feira">Sexta-feira</option>
+            </select>
+
+            <label for="time">Horário:</label>
+            <input type="text" id="time" name="time" placeholder="Ex.: 08:00 - 10:00" required>
             
             <button type="submit">Cadastrar</button>
         </form>
-
-        <div class="success-message" id="successMessage" style="display: none;">
-            Cadastro concluído com 100% de acerto!
-        </div>
     </div>
 
 </body>
